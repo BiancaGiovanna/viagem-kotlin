@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "667182280783",
+    "project_id": "viagens-bia-mobile",
+    "storage_bucket": "viagens-bia-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667182280783:android:05439e353c1251b4707a3a",
+        "android_client_info": {
+          "package_name": "br.senai.sp.jandira.viagens"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "667182280783-sguvlnrc3e6s4j3to8qr89qp6ao063lp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.senai.sp.jandira.viagens",
+            "certificate_hash": "5d5ed353e6cccd788b186325d809c9d240d72bb1"
+          }
+        },
+        {
+          "client_id": "667182280783-bnlmin6m0johgaju89ik66t91ism2ft2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtQqFrcc52vbe9bQTQOX65jkH4GyAVaTQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "667182280783-bnlmin6m0johgaju89ik66t91ism2ft2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

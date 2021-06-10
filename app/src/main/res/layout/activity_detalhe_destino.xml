@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DetalheDestinoActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:title="Nome do destino"
+            app:expandedTitleTextAppearance="@style/expandedTitle"
+            app:collapsedTitleTextAppearance="@style/collapsedTitle"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/iv_destino"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/porto_galinhas"
+                android:scaleType="centerCrop"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="bottom"
+                android:background="@drawable/collapse_header_background"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_local"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="Nome do Local"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:drawableStart="@drawable/ic_location_24"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/colorPrimary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+                    android:textColor="@color/colorPrimary"/>
+
+                <TextView
+                    android:id="@+id/tv_a_partir_de"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A partir de:"
+                    app:layout_constraintStart_toStartOf="@id/tv_local"
+                    app:layout_constraintTop_toBottomOf="@id/tv_local"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/roboto"/>
+
+                <TextView
+                    android:id="@+id/tv_valor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R$ 500.00"
+                    android:textSize="32sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:fontFamily="@font/roboto"
+                    app:layout_constraintStart_toEndOf="@id/tv_a_partir_de"
+                    app:layout_constraintTop_toTopOf="@id/tv_a_partir_de"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_a_partir_de"
+                    android:layout_marginStart="8dp"/>
+
+                <TextView
+                    android:id="@+id/tv_galeria_imagens"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Galeria de Imagens"
+                    android:drawableStart="@drawable/ic_photo_library_24"
+                    app:layout_constraintTop_toBottomOf="@id/tv_valor"
+                    app:layout_constraintStart_toStartOf="@id/tv_a_partir_de"
+                    style="@style/subtitles"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_galeria_fotos_destino"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_galeria_imagens"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="8dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/tv_descricao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Descrição"
+                    app:layout_constraintTop_toBottomOf="@id/rv_galeria_fotos_destino"
+                    app:layout_constraintStart_toStartOf="@id/tv_galeria_imagens"
+                    android:drawableStart="@drawable/ic_info_24"
+                    style="@style/subtitles"/>
+
+                <TextView
+                    android:id="@+id/tv_texto_descricao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_descricao"
+                    app:layout_constraintStart_toStartOf="@id/tv_descricao"
+                    android:text="Mussum Ipsum, cacilds vidis litro abertis. Cevadis im ampola pa arma uma pindureta. Per aumento de cachacis, eu reclamis. Copo furadis é disculpa de bebadis, arcu quam euismod magna. Detraxit consequat et quo num tendi nada."/>
+
+                <TextView
+                    android:id="@+id/tv_comentarios"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Comentários"
+                    app:layout_constraintTop_toBottomOf="@id/tv_texto_descricao"
+                    app:layout_constraintStart_toStartOf="@id/tv_galeria_imagens"
+                    android:drawableStart="@drawable/ic_comments"
+                    style="@style/subtitles"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
