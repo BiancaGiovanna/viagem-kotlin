@@ -43,6 +43,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     private fun updateUI() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
+        finish()
     }
 
     override fun onClick(view: View) {
